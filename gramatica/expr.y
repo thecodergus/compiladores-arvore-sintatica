@@ -14,7 +14,7 @@ int yylex();
 %token TADD TMUL TSUB TDIV TAPAR TFPAR TNUM TFIM
 
 %%
-Linha :Expr TFIM {printf("Resultado:%lf\n", $1);exit(0);}
+Linha :Expr TFIM {printf("Arvore:\n"); printarArvore(&$1); exit(0);}
 	; 
 Expr: Expr TADD Termo {$$.ptr = gerarNo(ADD, $1.ptr, $3.ptr);}
 	| Expr TSUB Termo {$$.ptr = gerarNo(SUB, $1.ptr, $3.ptr);}

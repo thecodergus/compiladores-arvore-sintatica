@@ -1,7 +1,12 @@
 #include <stdio.h>
+#include "expr.tab.h"
+
+extern FILE *yyin;
 
 int main(){
-    printf("Ola Mundo\n");
+    yyin = stdin;
+    printf("Digite uma expressao: ");
+    yyparse();
 
     return 0;
 }

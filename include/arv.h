@@ -2,6 +2,7 @@
 #define ARV_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 enum Operadores{
     ADD,
@@ -18,5 +19,7 @@ struct Arv {
 
 struct Arv *gerarNo(int, struct Arv*, struct Arv*);
 struct Arv *gerarFolha(double);
+
+void printar(struct Arv*);
 
 #endif
