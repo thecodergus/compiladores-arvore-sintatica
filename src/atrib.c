@@ -1,5 +1,9 @@
 #include "atrib.h"
 
 void printarArvore(struct Atrib *arv){
-    printar(arv->ptr);
+    if (arv == NULL){
+        return;
+    }
+    printarNo(arv->ptr);
+    printf("\n");
 }

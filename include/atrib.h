@@ -11,6 +11,6 @@ struct Atrib {
     double valor;
 };
 
-void printarArvore(struct Atrib *);
+void printarArvore(struct Atrib*);
 
 #endif

@@ -20,6 +20,8 @@ struct Arv {
 struct Arv *gerarNo(int, struct Arv*, struct Arv*);
 struct Arv *gerarFolha(double);
 
-void printar(struct Arv*);
+void printarNo(struct Arv *no);
+
+char getOperador(enum Operadores op);
 
 #endif
