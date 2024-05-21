@@ -42,10 +42,16 @@ char getOperador(enum Operadores op){
 }
 
 void printarNo(struct Arv *no){
-    if (no == NULL)
+    if (no == NULL){
         return;
+    }
 
-    printf("(%c ", getOperador(no->op));
+    if (no->p1 == NULL && no->p2 == NULL){
+        printf("(");
+    }else{
+        printf("(%c ", getOperador(no->op));
+    }
+    
     if (no->p1 != NULL){
         printarNo(no->p1);
     }
@@ -54,7 +60,7 @@ void printarNo(struct Arv *no){
     }
 
     if (no->p1 == NULL && no->p2 == NULL){
-        printf(" %.3lf", no->valor);
+        printf("%.3lf", no->valor);
     }
 
 
