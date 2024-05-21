@@ -23,4 +23,4 @@ num	{digito}+(\.{digito}*(E[+-]?{digito}+)?)?
 "("	{return TAPAR;}
 ")"	{return TFPAR;}
 \n	{return TFIM;}
-{num}	{yylval=atof(yytext); return TNUM;} 
+{num}	{yylval = atof(yytext); return TNUM;} 

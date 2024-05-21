@@ -13,7 +13,7 @@ struct Arv* gerarNo(int op, struct Arv* p1, struct Arv* p2){
 
 struct Arv* gerarFolha(double valor){
     struct Arv *p = (struct Arv *)malloc(sizeof(struct Arv));
-    printf("Valor: %lf\n", valor);
+    
     p->valor = valor;
     p->p1 = NULL;
     p->p2 = NULL;
